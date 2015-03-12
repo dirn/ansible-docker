@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andy Dirnberger
-  description: Installs Docker.
+  description: Installs Docker and related utilities.
   company:
   license: MIT
   min_ansible_version: 1.6

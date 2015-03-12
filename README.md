@@ -16,7 +16,25 @@ for a role to handle it for you, check out
 Role Variables
 --------------
 
-None.
+Several variables are available to configure the role.
+
+To control where the related utilities are installed:
+
+    docker_utility_root: /usr/local/bin
+
+To control if and which version of [Machine](https://github.com/docker/machine)
+is installed:
+
+    docker_install_machine: false
+    docker_version_machine: v0.1.0
+
+To control if [Compose](https://github.com/docker/compose) is installed:
+
+    docker_install_compose: false
+    docker_version_compose: '1.1.0'
+
+> `docker_version_compose` isn't used in OS X since Homebrew is used to manage
+> installation.
 
 Dependencies
 ------------
