@@ -1,0 +1,14 @@
+---
+# Ubuntu provides a package named `docker.io`. It is a bit dated, so the version
+# maintained by Docker is being used instead.
+- name: Add key
+  sudo: yes
+  apt_key: url=http://get.docker.io/gpg id=A88D21E9
+
+- name: Add repository
+  sudo: yes
+  apt_repository: repo="deb http://get.docker.io/ubuntu docker main" update_cache=yes state=present
+
+- name: Install
+  sudo: yes
+  apt: pkg=lxc-docker update_cache=yes state=present
