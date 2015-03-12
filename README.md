@@ -3,7 +3,7 @@ Docker
 
 [![Build Status](https://travis-ci.org/dirn/ansible-docker.svg?branch=master)](https://travis-ci.org/dirn/ansible-docker)
 
-An Ansible role to install and update Docker.
+An Ansible role to install [Docker](https://www.docker.com/).
 
 Requirements
 ------------
