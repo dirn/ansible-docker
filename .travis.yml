@@ -7,9 +7,6 @@ os:
 
 before_install:
   - sudo apt-get update -qq
-  - [ -e /usr/lib/apt/methods/https ] || {
-      sudo apt-get install -y apt-transport-https
-    }
 
 install:
   - pip install ansible
