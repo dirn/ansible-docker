@@ -13,7 +13,7 @@
 
 - name: Install Machine
   get_url: >
-    url=https://github.com/docker/machine/releases/download/{{ docker_machine_version }}/docker-machine_{{ docker_os_family }}-amd64
+    url=https://github.com/docker/machine/releases/download/{{ docker_version_machine }}/docker-machine_{{ docker_os_family }}-amd64
     dest={{ docker_utility_root }}/docker-machine
     force=yes
     mode=0755
