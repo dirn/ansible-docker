@@ -47,6 +47,8 @@ Example Playbook
     - hosts: servers
       roles:
         - role: dirn.docker
+          docker_install_machine: true
+          docker_install_compose: true
 
 License
 -------
