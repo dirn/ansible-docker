@@ -5,19 +5,11 @@
 - include: osx/docker.yml
   when: ansible_os_family == 'Darwin'
 
-- set_fact: docker_os_family='linux'
-  when: ansible_os_family == 'Debian'
+- include: debian/machine.yml
+  when: docker_install_machine and ansible_os_family == 'Debian'
 
-- set_fact: docker_os_family='darwin'
-  when: ansible_os_family == 'Darwin'
-
-- name: Install Machine
-  get_url: >
-    url=https://github.com/docker/machine/releases/download/{{ docker_version_machine }}/docker-machine_{{ docker_os_family }}-amd64
-    dest={{ docker_utility_root }}/docker-machine
-    force=yes
-    mode=0755
-  when: docker_install_machine
+- include: osx/machine.yml
+  when: docker_install_machine and ansible_os_family == 'Darwin'
 
 - include: debian/compose.yml
   when: docker_install_compose and ansible_os_family == 'Debian'

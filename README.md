@@ -9,9 +9,9 @@ Requirements
 ------------
 
 This role works on OS X and Debian-based OSes. If using OS X, make sure you have
-[Homebrew](http://brew.sh/) installed before running the role. If you're looking
-for a role to handle it for you, check out
-[dirn.homebrew](https://github.com/dirn/ansible-homebrew).
+[Homebrew](http://brew.sh/) and [Homebrew Cask](http://caskroom.io/) installed
+before running the role. If you're looking for a role to handle them for you,
+check out [dirn.homebrew](https://github.com/dirn/ansible-homebrew).
 
 Role Variables
 --------------
@@ -27,6 +27,9 @@ is installed:
 
     docker_install_machine: false
     docker_version_machine: v0.1.0
+
+> `docker_version_machine` isn't used in OS X since Homebrew is used to manage
+> installation.
 
 To control if [Compose](https://github.com/docker/compose) is installed:
 
