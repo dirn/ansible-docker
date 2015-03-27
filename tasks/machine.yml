@@ -1,0 +1,6 @@
+---
+- include: debian/machine.yml
+  when: ansible_os_family == 'Debian'
+
+- include: osx/machine.yml
+  when: ansible_os_family == 'Darwin'
