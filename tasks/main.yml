@@ -1,9 +1,5 @@
 ---
-- include: debian/docker.yml
-  when: ansible_os_family == 'Debian'
-
-- include: osx/docker.yml
-  when: ansible_os_family == 'Darwin'
+- include: docker.yml
 
 - include: machine.yml
   when: docker_install_machine
