@@ -26,7 +26,7 @@ To control if and which version of [Machine](https://github.com/docker/machine)
 is installed:
 
     docker_install_machine: false
-    docker_version_machine: v0.1.0
+    docker_version_machine: v0.2.0
 
 > `docker_version_machine` isn't used in OS X since Homebrew is used to manage
 > installation.
@@ -34,7 +34,7 @@ is installed:
 To control if [Compose](https://github.com/docker/compose) is installed:
 
     docker_install_compose: false
-    docker_version_compose: '1.1.0'
+    docker_version_compose: '1.2.0'
 
 > `docker_version_compose` isn't used in OS X since Homebrew is used to manage
 > installation.
