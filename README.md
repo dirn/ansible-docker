@@ -22,6 +22,9 @@ To control where the related utilities are installed:
 
     docker_utility_root: /usr/local/bin
 
+> `docker_utility_root` isn't used in OS X since Homebrew is used to manage
+> installations.
+
 To control if and which version of [Machine](https://github.com/docker/machine)
 is installed:
 
